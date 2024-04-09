@@ -17,11 +17,24 @@ import Footer from './components/Layout/Footer.vue';
 //vars
 $bg-color: #080808;
 $text-color: #f2f2f2;
-$padding-top: 16px;
-$padding-bottom: 16px;
+$padding-top: 24px;
+$padding-bottom: 24px;
+$margin-bottom: 24px;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 $font-size-l: 22px;
+
+:root {
+  --bg-color: #{$bg-color};
+  --text-color: #{$text-color};
+  --padding-top: #{$padding-top};
+  --padding-bottom: #{$padding-bottom};
+  --margin-bottom: #{$margin-bottom};
+  --font-weight-medium: #{$font-weight-medium};
+  --font-weight-bold: #{$font-weight-bold};
+  --font-size-l: #{$font-size-l};
+}
+//vars
 
 .app {
   font-family: 'Open Sans', sans-serif;
@@ -52,8 +65,20 @@ $font-size-l: 22px;
 }
 .footer {
   line-height: 60px;
-  background-color: $bg-color;
+  background-color: #080808a3;
   color: $text-color;
   margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
+.description__title {
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  margin-bottom: $margin-bottom
+}
+.description__paragraph:not(:last-child) {
+  margin-bottom: $margin-bottom
+}
+
 </style>

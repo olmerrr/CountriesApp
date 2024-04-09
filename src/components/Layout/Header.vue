@@ -13,7 +13,9 @@
 
         <ul class="nav-links">
           <li v-for="link in navigationStore.links" :key="link.text">
-            <router-link :to="link.url">{{ link.text }}</router-link>
+            <router-link
+                class="link"
+                :to="link.url">{{ link.text }}</router-link>
           </li>
         </ul>
       </nav>
@@ -39,5 +41,16 @@
   display: flex;
   color: inherit;
   gap: 20px;
+}
+.link {
+  padding: 10px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  cursor: pointer;
+  background-color: rgba(89, 88, 88, 0.38);
+  border-radius: 2px;
 }
 </style>

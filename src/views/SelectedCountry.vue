@@ -38,9 +38,18 @@
         <div class="selected-country__info">
           Native Name: {{ country.nativeName }}
         </div>
-        <div class="selected-country__info">
-          Native Name: {{ country.nativeName }}
+        <div
+            class="selected-country__info"
+            v-for="item in country.currencies"
+            key="item">
+          Currencies: {{ item.name }}
         </div>
+        <div
+            class="selected-country__info"
+            v-for="code in country.callingCodes"
+            key="code">
+        Calling Codes: {{ code }}
+    </div>
       </section>
     </div>
   </div>

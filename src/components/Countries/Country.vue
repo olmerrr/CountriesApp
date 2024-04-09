@@ -40,11 +40,12 @@ const props = defineProps<{
 </script>
 <style scoped>
 .country {
-  padding: 16px;
+  padding: 24px;
   width: 230px;
   display: flex;
   flex-direction: column;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 49, 0.1);
+  border-radius: 4px;
 }
 
 .country__flag {
