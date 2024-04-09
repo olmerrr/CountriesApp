@@ -46,6 +46,12 @@ const props = defineProps<{
   flex-direction: column;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 49, 0.1);
   border-radius: 4px;
+  @media screen and (max-width: 623px) {
+    & {
+      padding: 14px;
+      max-width: 230px;
+    }
+  }
 }
 
 .country__flag {
@@ -63,13 +69,4 @@ const props = defineProps<{
   font-size: 14px;
 }
 
-.country__capital {
-}
-
-.country__area {
-}
-
-.country__timezones {
-  font-weight: 300;
-}
 </style>

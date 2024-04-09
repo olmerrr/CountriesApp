@@ -23,4 +23,17 @@ const props = defineProps<{
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
 }
+@media screen and (max-width: 1023px) {
+  .countries {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 623px) {
+  .countries {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>

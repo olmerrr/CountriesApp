@@ -61,6 +61,11 @@
   display: flex;
   gap: 40px;
   margin: 20px 0 60px;
+  @media screen and (max-width: 1223px) {
+    & {
+      flex-direction: column;
+    }
+    }
 }
 
 .contact-page__img {
@@ -68,6 +73,12 @@
   max-width: 790px;
   height: 472px;
   margin-bottom: 24px;
+  @media screen and (max-width: 623px) {
+    & {
+      height: auto;
+      max-width: 250px;
+    }
+   }
 }
 </style>
 

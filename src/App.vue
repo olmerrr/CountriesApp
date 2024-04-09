@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
+import {RouterView} from 'vue-router';
 
 import Header from './components/Layout/Header.vue';
 import Footer from './components/Layout/Footer.vue';
 </script>
 
 <template>
-  <div class="app" >
+  <div class="app">
     <Header/>
-    <RouterView />
+    <RouterView/>
     <Footer/>
   </div>
 </template>
@@ -34,6 +34,7 @@ $font-size-l: 22px;
   --font-weight-bold: #{$font-weight-bold};
   --font-size-l: #{$font-size-l};
 }
+
 //vars
 
 .app {
@@ -43,26 +44,37 @@ $font-size-l: 22px;
   flex-direction: column;
   min-height: calc(100vh - 30px);
 }
+
 .container {
   max-width: 1220px;
   margin: 0 auto;
   padding: 0 20px;
+  @media screen and (max-width: 623px) {
+    & {
+      max-width: 300px;
+    }
+  }
 }
+
 .header {
+  width: 100%;
   padding: 8px 0 10px;
   line-height: 40px;
   background-color: $bg-color;
   color: $text-color;
 }
+
 .page {
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
 }
+
 .page-title {
   font-size: $font-size-l;
   font-weight: $font-weight-bold;
   padding-bottom: $padding-bottom;
 }
+
 .footer {
   line-height: 60px;
   background-color: #080808a3;
@@ -71,14 +83,20 @@ $font-size-l: 22px;
   position: fixed;
   bottom: 0;
   width: 100%;
+  @media screen and (max-width: 1023px) {
+    & {
+      display: none;
+    }
+  }
 }
+
 .description__title {
   font-size: 18px;
   font-weight: $font-weight-bold;
   margin-bottom: $margin-bottom
 }
+
 .description__paragraph:not(:last-child) {
   margin-bottom: $margin-bottom
 }
-
 </style>

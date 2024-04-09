@@ -48,6 +48,12 @@ const handleSubmit = () => {
   padding: 24px;
   border-radius: 4px;
   background: rgba(169, 89, 169, 0.82);
+  @media screen and (max-width: 423px) {
+    & {
+      width: 220px;
+    }
+  }
+
 
   &__title {
     font-size: 22px;
