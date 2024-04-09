@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import useCountries from "../composables/useCountries";
-import Countries from "../components/Countries.vue";
+import Countries from "../components/Countries/Countries.vue";
 
 const { countries } = useCountries();
 

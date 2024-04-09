@@ -1,6 +1,6 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
-import { useCountriesStore } from "../countriesStore";
+import { useCountriesStore } from "../stores/countriesStore";
 
 export default function useCountries() {
   const countriesStore = useCountriesStore();
