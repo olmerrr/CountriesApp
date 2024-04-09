@@ -1,7 +1,7 @@
 // src/store/countries.ts
 import { defineStore } from 'pinia';
 
-interface ICountry {
+export interface ICountry {
   name: string;
   topLevelDomain?: string[];
   alpha2Code?: string;
@@ -10,30 +10,30 @@ interface ICountry {
   capital: string;
   altSpellings?: string[];
   subregion?: string;
-  region?: string;
-  population?: number;
+  region: string;
+  population: number;
   latlng?: number[];
   demonym?: string;
   area?: number;
   timezones?: string[];
   nativeName?: string;
   numericCode?: string;
-  flags?: Record<string, unknown>; // Предположим, что это объект, содержащий информацию о флагах страны
-  currencies?: Record<string, unknown>[]; // Предположим, что это массив объектов, содержащих информацию о валютах страны
-  languages?: Record<string, unknown>[]; // Предположим, что это массив объектов, содержащих информацию о языках страны
-  translations?: Record<string, string>; // Предположим, что это объект, содержащий информацию о переводах названия страны
-  flag?: string; // URL-адрес флага страны
-  regionalBlocs?: Record<string, unknown>[]; // Предположим, что это массив объектов, содержащих информацию о региональных блоках страны
+  flags?: Record<string, unknown>;
+  currencies?: Record<string, unknown>[];
+  languages?: Record<string, unknown>[];
+  translations?: Record<string, string>;
+  flag?: string;
+  regionalBlocs?: Record<string, unknown>[];
   independent?: boolean;
 }
 
-interface CountriesState {
+export interface ICountriesState {
   countries: ICountry[];
 }
 
 export const useCountriesStore = defineStore({
   id: 'countries',
-  state: (): CountriesState => ({
+  state: (): ICountriesState => ({
     countries: []
   }),
   actions: {

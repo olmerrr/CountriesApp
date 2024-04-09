@@ -1,6 +1,6 @@
 <template>
-  <div class="home-page container">
-    <h1>Welcome to the Search Countries App</h1>
+  <div class="home-page page container">
+    <h1 class="page-title">Welcome to the Search Countries App</h1>
     <Countries :countries="pagedCountries" />
     <div class="pagination">
       <button @click="prevPage" :disabled="currentPage === 1">Previous</button>
@@ -15,7 +15,7 @@ import { ref, computed } from 'vue';
 import useCountries from "../composables/useCountries";
 import Countries from "../components/Countries/Countries.vue";
 
-const { countries } = useCountries();
+const { countries }: { countries: Countries } = useCountries();
 
 const itemsPerPage = 20;
 const currentPage = ref(1);

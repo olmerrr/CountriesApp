@@ -1,19 +1,19 @@
 <template>
-  <div>
-    <h2>Countries Page</h2>
     <ul class="countries">
       <Country
-          v-for="country in countries"
-          :key="country" :country="country"
+          v-for="(country, index) in countries"
+          :key="index"
+          :country="country"
       />
     </ul>
-  </div>
 </template>
 
 <script setup lang="ts">
 import Country from "./Country.vue";
+import {ICountry} from "../../stores/countriesStore";
+
 const props = defineProps<{
-  countries:  [];
+  countries:  ICountry[];
 }>();
 </script>
 

@@ -1,18 +1,23 @@
 <script setup lang="ts">
-
+const currentYear = new Date().getFullYear();
 </script>
 
 <template>
   <footer class="footer">
     <div class="container">
-      Footer
+      <header class="footer__header">
+        <span>
+        Created by Yaroslav Dombrovskiy
+      </span>
+        <span>{{ currentYear }}</span>
+      </header>
     </div>
   </footer>
 </template>
 
 <style scoped>
-  .footer {
-    background-color: #333;
-    margin-top: auto;
-  }
+.footer__header {
+  display: flex;
+  justify-content: space-between;
+}
 </style>

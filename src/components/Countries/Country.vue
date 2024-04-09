@@ -32,9 +32,10 @@
 
 <script setup lang="ts">
 import {defineProps} from 'vue';
+import {ICountry} from "../../stores/countriesStore";
 
 const props = defineProps<{
-  country: {}
+  country: ICountry
 }>();
 </script>
 <style scoped>
@@ -49,17 +50,24 @@ const props = defineProps<{
 .country__flag {
   height: 130px;
 }
+
 .country__title {
   font-size: 22px;
   font-weight: 700;
   margin: 16px 0 22px;
 }
+
 .country__region {
   font-weight: 300;
   font-size: 14px;
 }
-.country__capital {}
-.country__area {}
+
+.country__capital {
+}
+
+.country__area {
+}
+
 .country__timezones {
   font-weight: 300;
 }
