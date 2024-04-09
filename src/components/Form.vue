@@ -33,8 +33,9 @@ import {ref} from "vue";
 const firstName = ref("");
 const secondName = ref("");
 const email = ref("");
+
 const handleSubmit = () => {
-  if (firstName.length && secondName.length && email.length) {
+  if (firstName.value && secondName.value && email.value) {
     alert("Submit");
   }
 }
