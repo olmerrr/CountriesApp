@@ -1,14 +1,16 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import { useCountriesStore } from "../stores/countriesStore";
+import {BASE_API} from "./api";
 
 export default function useCountries() {
   const countriesStore = useCountriesStore();
   const countries = ref<any[]>([]);
+  const isLoading = ref<boolean>(true);
 
   const fetchCountries = async () => {
     try {
-      const response = await axios.get('https://restcountries.com/v2/all');
+      const response = await axios.get(`${BASE_API}/all`);
       return response.data;
     } catch (error) {
       console.error('Ошибка загрузки данных:', error);
@@ -19,10 +21,12 @@ export default function useCountries() {
   onMounted(async () => {
     const data = await fetchCountries();
     countries.value = data;
-    countriesStore.setCountries(data); // Записываем данные в хранилище
+    countriesStore.setCountries(data);
+    isLoading.value = false;
   });
 
   return {
-    countries
+    countries,
+    isLoading
   };
 }

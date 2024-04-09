@@ -3,11 +3,10 @@ import { RouterView } from 'vue-router';
 
 import Header from './components/Layout/Header.vue';
 import Footer from './components/Layout/Footer.vue';
-
 </script>
 
 <template>
-  <div class="app">
+  <div class="app" >
     <Header/>
     <RouterView />
     <Footer/>
@@ -35,15 +34,6 @@ $font-size-l: 22px;
   max-width: 1220px;
   margin: 0 auto;
   padding: 0 20px;
-}
-ul, li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-a {
-  color: inherit;
-  text-decoration: none;
 }
 .header {
   padding: 8px 0 10px;

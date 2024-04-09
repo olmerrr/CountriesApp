@@ -1,5 +1,5 @@
 <template>
-  <li class="country">
+  <router-link :to="`/selected-country/${country.name}`" class="country">
     <img
         :src="country.flag"
         alt="country.name"
@@ -27,7 +27,7 @@
       Timezones: {{ timezone }}
     </div>
 
-  </li>
+  </router-link>
 </template>
 
 <script setup lang="ts">

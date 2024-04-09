@@ -1,4 +1,3 @@
-// src/store/countries.ts
 import { defineStore } from 'pinia';
 
 export interface ICountry {
